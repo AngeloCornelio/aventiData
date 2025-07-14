@@ -7,7 +7,8 @@
   "type": "commonjs",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js"
+    "dev": "nodemon app.js",
+    "run": "node app.js"
   },
   "dependencies": {
     "dotenv": "^17.2.0",
