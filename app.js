@@ -11,3 +11,18 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`AventiData started on port ${port}`);
 })
+
+const { createInterface } = require('node:readline');
+const rl = createInterface({input: process.stdin, output: process.stdout});
+rl.on('line', line => {
+  switch (line.trim()) {
+    case 'exit':
+    case 'quit':
+    case 'q':
+      console.log('Stopping server');
+      process.exit(0);
+      break;
+    default:
+      console.log('Unrecognized command');
+  }
+})
